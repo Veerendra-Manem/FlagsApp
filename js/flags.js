@@ -135,10 +135,13 @@ function getInputs() {
     var randomNumber = Math.floor(Math.random() * 113);
     var country = ar1[randomNumber];
     var countryParams = country.split("-");
-    var file = "/images/pngs/" + countryParams[0] + ".png";
-    
+    var file = "images/pngs/" + countryParams[0] + ".png";
+    var lastSrc = document.getElementById("flagHolder").src;
+    var lastSrcParams = lastSrc.split("/");
+    var currentFlag = lastSrcParams[lastSrcParams.length-1] 
+    var newFlag = countryParams[0]+".png";
     document.getElementById("demo").innerHTML = countryParams[1];
-    document.getElementById("flagHolder").src = file;    
+    document.getElementById("flagHolder").src = lastSrc.replace(currentFlag , newFlag);    
 
     var randomOption = Math.floor(Math.random() * 4) + 1;
     document.getElementById("op"+randomOption).innerHTML = countryParams[1];
