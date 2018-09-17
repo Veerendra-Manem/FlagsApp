@@ -135,7 +135,7 @@ function getInputs() {
     var randomNumber = Math.floor(Math.random() * 113);
     var country = ar1[randomNumber];
     var countryParams = country.split("-");
-    var file = "images/pngs/" + countryParams[0] + ".png";
+    var file = "images/" + countryParams[0] + ".png";
     var lastSrc = document.getElementById("flagHolder").src;
     var lastSrcParams = lastSrc.split("/");
     var currentFlag = lastSrcParams[lastSrcParams.length-1] 
