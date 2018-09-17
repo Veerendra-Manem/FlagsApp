@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Bittu Flags Game</h1>
+<body onload="next()">
+<input type="checkbox" id="showdemo"><label width="250">Question </label><b id="page">1</b>
+
+
+<br/>
+
+<img  id="flagHolder" src="images/ad.png" width="300" height="200"/>
+
+<p>Select and Click OK:</p>
+
+
+<form>
+    <input type="radio" name="country" value="op1" /> <label id="op1">Option 1</label><br>
+    <input type="radio" name="country" value="op2" /> <label id="op2">Option 2</label><br>
+    <input type="radio" name="country" value="op3" /> <label id="op3">Option 3</label><br>
+    <input type="radio" name="country" value="op4" /> <label id="op4">Option 4</label><br>
+</form>
+
+<br/>
+<br/>
+
+<button onclick="myFunction()">OK</button>
+<button onclick="next()">Next</button>
+
+<br/>
+<p id="result"></p>
+<p hidden="true" id="demo"></p>
+<br/>
+<audio id="applause">    
+    <source src="audio\applause.mp3" type="audio/mpeg">  
+  </audio>
+
+  <audio id="tryagain">    
+    <source src="audio\tryagain.mp3" type="audio/mpeg">  
+  </audio>
+
+<script src="js/flags.js"></script>
+</body>
+</html>
