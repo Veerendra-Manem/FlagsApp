@@ -151,6 +151,10 @@ function getInputs() {
             if(i === randomOption) continue;
             var optionCountry = ar1[Math.floor(Math.random() * 113)];
             var optCountryParams = optionCountry.split("-");
+            if(countryParams[1] === optCountryParams[1]) {
+            i--;
+            continue;
+            }
             document.getElementById("op"+i).innerHTML = optCountryParams[1];       
         }
     }
