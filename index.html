@@ -2,35 +2,68 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-  </head>
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">  
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+   <title>FlagsApp</title>
+</head>
 <body>
 <h1>Bittu Flags Game</h1>
 <body onload="next()">
 <input type="checkbox" id="showdemo"><label width="250">Question </label><b id="page">1</b>
 
-
 <br/>
 
-<img  id="flagHolder" src="images/ad.png" width="300" height="200"/>
+<img  id="flagHolder"  src="images/ad.png" width="300" height="200" class="rounded"/>
 
 <p>Select and Click OK:</p>
 
-
 <form>
-    <input type="radio" name="country" value="op1" /> <label id="op1">Option 1</label><br>
+   <!-- <input type="radio" name="country" value="op1" /> <label id="op1"></label>Option 1</label><br>
     <input type="radio" name="country" value="op2" /> <label id="op2">Option 2</label><br>
     <input type="radio" name="country" value="op3" /> <label id="op3">Option 3</label><br>
-    <input type="radio" name="country" value="op4" /> <label id="op4">Option 4</label><br>
+    <input type="radio" name="country" value="op4" /> <label id="op4">Option 4</label><br>-->
+            <!-- Group of default radios - option 1 -->
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="rop1" name="country">
+              <label class="custom-control-label" for="rop1" id="op1">Option 1</label>
+            </div>
+
+            <!-- Group of default radios - option 2 -->
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="rop2" name="country" >
+              <label class="custom-control-label" for="rop2" id="op2">Option 2</label>
+            </div>
+
+            <!-- Group of default radios - option 3 -->
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="rop3" name="country">
+              <label class="custom-control-label" for="rop3" id="op3">Option 3</label>
+            </div>
+
+              <!-- Group of default radios - option 3 -->
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="rop4" name="country">
+                <label class="custom-control-label" for="rop4" id="op4">Option 3</label>
+              </div>          
 </form>
-
 <br/>
-<br/>
+<div style="height: 100px">
+  <!--<div class="h-25 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 25%</div>
+  <div class="h-50 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 50%</div>
+  <div class="h-75 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 75%</div>
+  <div class="h-100 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 100%</div>-->
+  <button class="btn btn-success" width="10vw" onclick="prev()"><</button>
+  <button class="btn btn-primary" style="width: 220px" onclick="myFunction()">OK</button>
+  <button class="btn btn-success" width="10vw" onclick="next()">></button>
+</div>
 
-<button onclick="myFunction()">OK</button>
-<button onclick="next()">Next</button>
+<!--<button class="btn btn-success" width="10vw" onclick="prev()"><</button>
+<button class="btn btn-primary" width="100"  onclick="myFunction()">OK</button>
+<div class="w-50 p-3" style="background-color: #eee;">Width 50%</div>
+<button class="btn btn-success" width="10vw" onclick="next()">></button>-->
 
-<br/>
 <p id="result"></p>
 <p hidden="true" id="demo"></p>
 <br/>
@@ -43,5 +76,11 @@
   </audio>
 
 <script src="js/flags.js"></script>
+<!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
+
 </html>

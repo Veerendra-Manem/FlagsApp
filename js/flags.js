@@ -3,7 +3,7 @@ function next() {
     
     for(var i=1;i<5;i++)
     {
-        document.getElementById("op"+i).checked = false;       
+        document.getElementById("rop"+i).checked = false;       
     }
 
     var idValue1 = document.getElementById("page").innerHTML;
@@ -176,8 +176,8 @@ function getInputs() {
         document.getElementById("demo").hidden = !document.getElementById("showdemo").checked;
         var txt = "";
         var correctId = document.getElementById("demo").innerHTML;        
-        var optionId = document.querySelector('input[name="country"]:checked').value;
-
+        var optionId = document.querySelector('input[name="country"]:checked').id;
+        optionId = optionId.replace("r","");
         var resultSum = document.getElementById(optionId).innerHTML;
         if (correctId === resultSum) {
             txt = "Good Job Bittu!!!";
