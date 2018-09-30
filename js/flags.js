@@ -1,5 +1,7 @@
 var displayed  = new Array(110);
 var correctCounter  = 0;
+var correctNames  = new Array(110);
+var errorNames  = new Array(110);
 var wrongCounter  = 0;
 
 function getInputs() {
@@ -159,8 +161,7 @@ countryParams = country.split("-");
 function next() {
     document.getElementById("result").innerHTML = null;
     
-    for(var i=1;i<5;i++)
-    {
+    for(var i=1;i<5;i++) {
         document.getElementById("rop"+i).checked = false;       
     }
 
@@ -196,6 +197,7 @@ function prev() {
         if (correctId === resultSum) {
             txt = "Good Job Bittu!!!";
             document.getElementById("applause").play();
+            correctNames[correctCounter] = correctId;
             correctCounter++;
             document.getElementById("correctSummary").innerHTML = "Correct : " + correctCounter;            
         } else {
@@ -203,10 +205,30 @@ function prev() {
             audioFile = "audio\tryagain.mp3";
             document.getElementById("tryagain").play();
             wrongCounter++;
+            errorNames[wrongCounter] = correctId;
             document.getElementById("errorSummary").innerHTML = "Wrong : " + wrongCounter;
         } 
                 
         document.getElementById("result").innerHTML = txt;         
     }
 
+    function correctResults() {
+        var cCountries = "";
+        correctNames.forEach(element => {
+            if(element !== undefined){
+                cCountries = cCountries + "\n" + element;
+            }
+        });
+        alert(cCountries);
+    }
+
+    function errorResults() {
+        var eCountries = "";
+        errorNames.forEach(element => {
+            if(element !== undefined){
+                eCountries = eCountries + "\n" + element;
+            }
+        });
+        alert(eCountries);
+    }
     
