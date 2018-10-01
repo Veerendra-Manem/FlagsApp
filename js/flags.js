@@ -132,6 +132,7 @@ countryParams = country.split("-");
     var idValue1 = document.getElementById("page").innerHTML;     
     displayed[Number(idValue1)] = countryParams[0];
     var file = "images/pngs/" + countryParams[0] + ".png";
+    
     var lastSrc = document.getElementById("flagHolder").src;
     var lastSrcParams = lastSrc.split("/");
     var currentFlag = lastSrcParams[lastSrcParams.length-1] 
@@ -208,8 +209,8 @@ function prev() {
             errorNames[wrongCounter] = correctId;
             document.getElementById("errorSummary").innerHTML = "Wrong : " + wrongCounter;
         } 
-                
         document.getElementById("result").innerHTML = txt;         
+        next();
     }
 
     function correctResults() {
