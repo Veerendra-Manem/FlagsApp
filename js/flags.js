@@ -136,7 +136,7 @@ countryParams = country.split("-");
     document.getElementById("demo").innerHTML = countryParams[1];
 
     if(document.getElementById("flagHolder").src !== undefined){
-        document.getElementById("flagHolder").src = file;
+        document.getElementById("flagHolder").src = file.toLowerCase();
     } else {
         var lastSrc = document.getElementById("flagHolder").src;
         var lastSrcParams = lastSrc.split("/");
