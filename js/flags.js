@@ -132,19 +132,22 @@ countryParams = country.split("-");
     var idValue1 = document.getElementById("page").innerHTML;     
     displayed[Number(idValue1)] = countryParams[0];
     var file = "images/pngs/" + countryParams[0] + ".png";
-    
-    var lastSrc = document.getElementById("flagHolder").src;
-    var lastSrcParams = lastSrc.split("/");
-    var currentFlag = lastSrcParams[lastSrcParams.length-1] 
     var newFlag = countryParams[0]+".png";
-    
     document.getElementById("demo").innerHTML = countryParams[1];
-    document.getElementById("flagHolder").src = lastSrc.replace(currentFlag , newFlag.toLowerCase());    
+
+    if(document.getElementById("flagHolder").src !== undefined){
+        document.getElementById("flagHolder").src = file;
+    } else {
+        var lastSrc = document.getElementById("flagHolder").src;
+        var lastSrcParams = lastSrc.split("/");
+        var currentFlag = lastSrcParams[lastSrcParams.length-1] 
+        document.getElementById("flagHolder").src = lastSrc.replace(currentFlag , newFlag.toLowerCase());
+    }         
 
     var randomOption = Math.floor(Math.random() * 4) + 1;
     document.getElementById("op"+randomOption).innerHTML = countryParams[1];
 
-        for(var i=1;i<5;i++)
+        for(var i=1; i<5; i++)
         {
             if(i === randomOption) continue;
             var optionCountry = ar1[Math.floor(Math.random() * 113)];
